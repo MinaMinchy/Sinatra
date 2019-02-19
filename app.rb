@@ -8,5 +8,10 @@ end
 require 'sinatra'
 get '/cat' do
   @name = ["Amigo", "Oscar", "Vicking"].sample
-  erb :index #erb() method reads the input file, processes Ruby that is inside and returns resulting HTML 
+  erb :index #erb() method reads the input file, processes Ruby that is inside and returns resulting HTML
+end
+
+get '/named-cat' do
+  @name = params[:name]
+  erb :index
 end
