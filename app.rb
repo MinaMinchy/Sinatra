@@ -7,5 +7,6 @@ end
 
 require 'sinatra'
 get '/cat' do
-  erb(:index)
+  @name = ["Amigo", "Oscar", "Vicking"].sample
+  erb :index #erb() method reads the input file, processes Ruby that is inside and returns resulting HTML 
 end
